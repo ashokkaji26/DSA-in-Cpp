@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main(){
@@ -13,7 +13,7 @@ int main(){
         for(int k=1; k<=i+1; k++){
             cout<<k;
         }
-        for(int l=i; l>0; l--){
+        for(int l = i; l>0; l--){
             cout<<l;
         }
         cout<<endl;

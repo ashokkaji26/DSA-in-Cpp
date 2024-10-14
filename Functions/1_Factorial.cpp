@@ -2,11 +2,11 @@
 using namespace std;
 
 int factN(int n){
-    int fact = 1;
+    int factorial = 1;
     for(int i = 1; i<=n; i++){
-        fact *= i;
+        factorial *= i;
     }
-    return fact;
+    return factorial;
 }
 
 int main(){

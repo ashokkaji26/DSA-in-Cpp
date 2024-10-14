@@ -12,6 +12,10 @@
               6. Loops 
               7. Pattern printing
               8. Functions
+              9. Function in memory
+              10. Pass by value :- copy of arguement is passed to Function.
+                                --> When we pass primitive data types to Function, that is Pass by value.
+              11. Pass by refrence 
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
@@ -62,12 +66,12 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
-4. Conditional statements :- Helps in taking decision, by returning values only yes or no.
+5. Conditional statements :- Helps in taking decision, by returning values only yes or no.
                           --> if , if else , if else-if else. 
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
-5. Loops :- Used to perform repititive task.
+6. Loops :- Used to perform repititive task.
             (a.) For Loop
             (b.) while Loop
             (c.) Do-while Loop
@@ -75,10 +79,14 @@
             
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
+7. Pattern printing :- 
+                    Step 1:- find no. of rows. => no. of times outer loop will run.
+                    Step 2:- (a.) find no. of characters in each row => no. of times inner loop will run.
+                             (b.) find what to print in particular row.
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
-
+8. Functions :- 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
 

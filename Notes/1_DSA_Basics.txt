@@ -4,18 +4,26 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------------     
 
-*** Topics: - 1. Flowchart
-              2. PsuedoCode
-              3. How to solve any problems.
-              4. Variables, data types, and Operators
-              5. Conditional statements
-              6. Loops 
-              7. Pattern printing
-              8. Functions
-              9. Function in memory
+*** Topics: - 1.  Flowchart
+              2.  PsuedoCode
+              3.  How to solve any problems.
+              4.  Variables, data types, Operators & operator precedence.
+              5.  Conditional statements
+              6.  Loops & Important concept
+              7.  Scope of variable
+              8.  Pattern printing
+              9.  Binary Number System
+             10.  Code: Decimal --> Binary
+             11.  Code: Binary --> Decimal
+             12.  Converting data from one type to another
+             13.  Data type modifiers
+             14.  ASCII system
+             15.  2's complement
+             16.  Functions
+             17.  Function in memory
               10. Pass by value :- copy of arguement is passed to Function.
                                 --> When we pass primitive data types to Function, that is Pass by value.
-              11. Pass by refrence 
+              11. Pass by refrence :
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
@@ -45,7 +53,7 @@
 4. (a.) Variables :- It is a container that stores some values.
                   --> It is a name of memory location.
 
-    (b.) Data Types :- it tells which type of data is stored in out Variables/memory.
+    (b.) Data Types :- it tells which type of data is stored in our Variables/memory.
 
                     ** Primitive Data Types :- 1. int (4 bytes)
                                                2. char (1 bytes)
@@ -56,12 +64,31 @@
     (c.) Operators :- Operators perform some operations.
 
                     1. Arithmetic Operators :- perform mathematical operations.
-                                            --> + , - , * , / , %
+                                            ---> + , - , * , / , %
 
                     2. Relational Operators :- tells the relation between two operands, returns yes or no.
-                                            --> < , <= , > , >= , == , !=
+                                            ---> < , <= , > , >= , == , !=
 
-                    3. Logical Operators :- $$ , || , !                                                
+                    3. Logical Operators :- $$ , || , !     
+
+                    4.  Bitwise operators :- Perform on binaray form of numbers.
+                                          1. Bitwise & 
+                                          2. Bitwise |
+                                          3. Bitwise ^
+                                          4. Bitwise << 
+                                          5. Bitwise >>
+
+                    5. Operator precedence(priority) :- 
+                                                     a. ! , a++, a--        (right --> Left)
+                                                     b. * , / , %           (L --> R)   
+                                                     c. + , -               (L --> R) 
+                                                     d. > , >= , < , <=     (L --> R)    
+                                                     e. == , !=             (L --> R)    
+                                                     f. &&                  (L --> R)
+                                                     g. ||                  (L --> R)
+                                                     h. ==                  (L --> R)  
+
+
                                                                                   
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
@@ -76,30 +103,173 @@
             (b.) while Loop
             (c.) Do-while Loop
 
+
+            *** Important concept of Loops:- 
+            for(int i = 0; i < 4; i++) {
+                int num;  
+                cin >> Pi;
+            }
+
+            concept:- 	
+                1.	Scope:
+	                    •	The variable num in this code is declared within the { } block of the for loop.
+	                    •	Because of this, it is only accessible within that specific iteration of the loop.
+	                    •	Each time a new loop iteration begins, the previous instance of num, no longer exists within that scope.
+
+	            2.	Lifetime:
+	                    •	When num goes out of scope (i.e., when the loop iteration finishes), it is automatically destroyed to free up memory.
+	                    •	C++ uses this approach to optimize memory usage. If num were to persist across all loop iterations,
+                            it would occupy memory unnecessarily, which could become a problem if many variables were declared this way or if there were a large number of loop iterations.
             
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
-7. Pattern printing :- 
+7. Scope of variable:- Area where we can access and use variables.
+
+                        1. Local scope:-
+                                        a. if-else
+                                        b. Loops
+                                        c. Functions
+                                        d. Block of code {}
+
+                        2. Global scope:- variable that can be used everywhere in program.
+                                        ex:- a variable declared before main() Function have a global scope.
+
+--------------------------------------------------------------------------------------------------------------------------------------- 
+
+8. Pattern printing :- 
                     Step 1:- find no. of rows. => no. of times outer loop will run.
                     Step 2:- (a.) find no. of characters in each row => no. of times inner loop will run.
-                             (b.) find what to print in particular row.
+                             (b.) find what to print in particular row, and build logic accordingly.
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
-8. Functions :- 
+9. Binary Number System:- 
+
+                        --> Number system:- No. of digits used for calculation.
+                        --> Maths: Decimal no. system --> 10 digits. Base10.
+                        --> Binary no. system :- 2 digits (0,1), Base2.
+
+                        0 - 0
+                        1 - 1
+                        2 - 10
+                        3 - 11
+                        4 - 100
+                        5 - 101
+                        6 - 110
+                        7 - 111
+                        8 - 1000
+                        9 - 1001
+                        10 - 1010
+
+                    *Conversion:- 
+                                1. Decimal to binary:- 
+                                                    --> repititive division with 2 until quotient becomes 0, & note remainder in each division.
+                                                    --> Then arrange remainders starting from down to up.
+
+                                     **Shortcut:- 42-->  0  1  0  1  0  1  0        
+                                                        -- -- -- -- -- -- -- 
+                                                        64 32 16  8  4  2  1
+
+                                2. Binary to Decimal:-   0     1     0     1     0     1     0 
+                                                         --    --    --    --    --    --    -- 
+                                                        X64 + X32 + X16 + X8  + X4  + X2  + X1
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+10. Code: Decimal --> Binary                           
+
+                            int decToBin(int n){       // function to convert Decimal to binary.
+
+                                int remainder;
+                                int power = 1;
+                                int binNo = 0;
+
+                                while(n>0){
+                                    remainder = n % 2;                                    
+                                    binNo = binNo + remainder * power;
+                                    n = n / 2;
+                                    power = power * 10;
+                                }
+                                return binNo;
+                            }
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
+11. Code: Binary --> Decimal
+
+                            int binToDec(int binNo){     // function to convert binary no to decimal no.
+
+                                int remainder;
+                                int power = 1;
+                                int decNo = 0;
+
+                                while(n > 0){
+                                    remainder = binNo % 10;
+                                    decNo = decNo + remainder * power;
+                                    binNo = binNo / 10;
+                                    power = power * 2;
+                                }
+                                return decNo;
+                            }
+--------------------------------------------------------------------------------------------------------------------------------------- 
+
+12. Converting data from one type to another :- 
+
+                                            1. Conversion :- 
+                                                         --> Implicit(automatically)
+                                                         --> Small data type to big data type
+                                                         --> char grade = 'a';
+                                                             int mark = grade;
+                                                             cout<<mark; --> 97
+
+                                            2. Type  casting :- 
+                                                            --> explicit(forcefully we have to do)
+                                                            --> Big data type to small data type
+                                                            --> double price = 100.99;
+                                                                int newPrice = (int)price;
+                                                                cout<<newPrice; --> 100
+
+        *** Whenever Arithmetic operation is performed between two data types, answer will occur in big data type.
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
+13. Data Type modifiers :- 
+                        --> Increase/decrease the capacity of variables.
+
+                        1. long (>= 4 Bytes) :- generally used with int.
+                        2. short (2 Bytes) :- short int x;
+                        3. long long (8 Bytes) :- long long int.
+                        4. signed int (+ve + -ve) :- -2^31 to +2^31-1
+                        5. singed int (only +ve values) :- 0 to 2^32-1
+
+ 
+--------------------------------------------------------------------------------------------------------------------------------------- 
+
+14. ASCII (American standard code for information interchange) :- 
+
+                                            --> It assigns a numeric value to each character such as letters,digits, 
+                                                punctuation marks and control characters. 
+
+                                            --> A(65)..... Z(90)
+                                            --> a(97)..... z(122)
+
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
+15. 2's complement :- 
 
---------------------------------------------------------------------------------------------------------------------------------------- 
+                --> Used when we need to store -ve nos. in computer.
+                --> int n = -10;
+                          1. convert  10 to binary form.
+                          2. prefix with a 0. act as MSB(most significant bit). 0 -> +ve, 1 -> -ve.
+                          3. 1's complement. 0 --> 1 & 1 --> 0;
+                          4. add 1.
 
 
---------------------------------------------------------------------------------------------------------------------------------------- 
+        *** Converting -ve binary no. to decimal:- 
 
+                                        1. 1's complement.
+                                        2. add 1. 
 
 --------------------------------------------------------------------------------------------------------------------------------------- 

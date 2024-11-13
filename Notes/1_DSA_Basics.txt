@@ -19,11 +19,11 @@
              13.  Data type modifiers
              14.  ASCII system
              15.  2's complement
-             16.  Functions
-             17.  Function in memory
-              10. Pass by value :- copy of arguement is passed to Function.
-                                --> When we pass primitive data types to Function, that is Pass by value.
-              11. Pass by refrence :
+             16.  Functions & Functions in memory
+             17.  Pass by value & Pass by refrence
+             18.  Arrays
+             19.  Vectors
+              
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
@@ -55,7 +55,7 @@
 
     (b.) Data Types :- it tells which type of data is stored in our Variables/memory.
 
-                    ** Primitive Data Types :- 1. int (4 bytes)
+                    ** Primitive(Most basic) Data Types :- 1. int (4 bytes)
                                                2. char (1 bytes)
                                                3. float (4 bytes)
                                                4. bool (1 bytes)
@@ -87,9 +87,6 @@
                                                      f. &&                  (L --> R)
                                                      g. ||                  (L --> R)
                                                      h. ==                  (L --> R)  
-
-
-                                                                                  
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
@@ -174,8 +171,6 @@
                                                          --    --    --    --    --    --    -- 
                                                         X64 + X32 + X16 + X8  + X4  + X2  + X1
 
-
-
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 10. Code: Decimal --> Binary                           
@@ -243,7 +238,6 @@
                         4. signed int (+ve + -ve) :- -2^31 to +2^31-1
                         5. singed int (only +ve values) :- 0 to 2^32-1
 
- 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
 14. ASCII (American standard code for information interchange) :- 
@@ -253,7 +247,6 @@
 
                                             --> A(65)..... Z(90)
                                             --> a(97)..... z(122)
-
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
@@ -273,3 +266,84 @@
                                         2. add 1. 
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
+
+16. Functions:- a function is a block of code that performs a specific task. Functions are used to break down complex problems into smaller,
+                 manageable pieces, making the code more modular, reusable, and easier to understand.
+
+            --> return_type function_name(parameters) {
+                                                        // body of the function
+                                                    }
+            
+            --> Literals:- Which doesn't change. eg:- 1,10, 'a', etc.
+            --> arguements:- Actual value passed to the function.
+            --> parameters :- copy of the arguements.
+            --> arguements are also Literals.
+            --> Identifiers :- Name of variables and functions.
+            --> Main function is automatically called by compiler.
+            --> If function is not returning any value then, it will return the control of the program, using 'void' keyword.
+
+
+        ***** Functions in memory :- 
+                                    1. Stack memory - Static allocation
+                                    2. heap memory - Dynamic allocation 
+
+                                    --> Functions are stored in Stack memory called 'Call Stack'. 
+                                    --> Stack frame:- each function in call stack is a stack frame.
+                                    --> functions sotored in call stack in layered form, 1st function will be at buttom of the stack and upcoming 
+                                        calling functions are stored order wise in call stack as they called by calling function.
+                                    --> As soon as a function return some value, it will be deleted from the call stack, hence no variables can be 
+                                        acceesed later in other functions, and  contro goes to calling function.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+17. Pass by Value and Pass by Refrence:- 
+
+                                    1. Pass by value:- 
+                                                    --> Copy of arguement is passed to function.
+                                                    --> primitive data type => Pass by value.
+
+                                    2. Pass by refrence(address):-
+                                                    --> Address of actual variable is passed to functions, allowing the function to modify the original variable.
+                                                    --> Generally Used For: Non-primitive data types Examples: Arrays, Objects, Structs, Vectors.
+
+                                    **Pass by Value: Efficient for primitive data types.
+                                    **Pass by Reference: Efficient for non-primitive data types. 
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+18. Arrays:- 1st data structures.
+            1. Same type of data
+            2. contiguous in memory
+            3. Linear data structure
+
+            --> data structures:- used to store datas.
+            --> Algorithms:- Operations perfomed on datas like:- sorting, searching.
+
+            * Create :- 
+                    1. int marks[5];
+                    2. int marks[]; // empty Arrays
+                    3. int marks[5] = {1,2,3,4,5};
+                    4. int marks[] = {1,2,3,4,5,6,}; // array's size = 6.
+
+            ** Array index:- 
+                       --> each block of array gets a possible called index, so that each block can be accessed and used.
+                       --> indexing:- 0 to n-1.
+                       --> Each index can be treated as a single variable.
+                       --> size of an array => no. of blocks(indices/elements).
+                       --> sizeof(array); // to find memory occupied in bytes.
+                       --> size of an array = sizeof(array) / sizeof(data type/one block size).
+
+            ** Linears search Algorithm:- checks each index. 
+
+            ** questions:- 1. Max/min in an array.
+                           2. find index of largest and smallest number.
+                           3. find a target value using linear search Algorithm.
+                           4. Reverse an array using two pointer approach.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+19. Vectors:- 
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------

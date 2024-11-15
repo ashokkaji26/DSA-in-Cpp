@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// to find sum of nos. divisible by 3.
 int main(){
     int n;
     int sum_3 = 0;

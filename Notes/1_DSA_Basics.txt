@@ -335,7 +335,7 @@
 
             ** Linears search Algorithm:- checks each index. 
 
-            ** questions:- 1. Max/min in an array.
+            ** questions:- 1. Max/min element in an array.
                            2. find index of largest and smallest number.
                            3. find a target value using linear search Algorithm.
                            4. Reverse an array using two pointer approach.

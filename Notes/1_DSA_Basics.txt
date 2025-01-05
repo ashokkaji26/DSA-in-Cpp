@@ -2,6 +2,17 @@
 
                                              ******************* DSA Basics *********************
 
+*** Important Points:- 
+
+1. Segmentation fault :- We are trying to access the element which is not possible to access in memeory.
+2. A question can be solved using Array or Vector both can solve equally.
+3. Static Vs Dynamic memeory allocation :- 
+
+        ---> Code runs in two stages:- 1. Compile and 2. Run/execution
+
+                                        * Static memeory allocation:- Memory allocated at compilation time.
+                                        * Dynamic memeory allocation:- Memory allocated at execution time.
+
 ---------------------------------------------------------------------------------------------------------------------------------------     
 
 *** Topics: - 1.  Flowchart
@@ -342,7 +353,42 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-19. Vectors:- 
+19. Vectors:- 2nd data structure, But very similar to Array, the only difference is that vector is dynamic in nature and array is static in nature.
+                Means size of vectors can be changed but size of arrays are fixed.
+
+            ---> All other functions will be perform like array.
+
+            * STL (standard template library) :-
+                                        ---> standard c++ library, where implementation codes of all data structures are stored, and 
+                                             we just use different data structures from STL( as a tool box ).
+                                        
+            * STL Containers:- Different data structures in STL called STL containers.
+
+            *** To create or use Different data structures from STL we have to include respective header files in our code.
+               ---> Example:- Vector -> #include <vector> 
+
+            * Create:- 
+                    1. vector<int> vector_name;  //empty vector.
+                    2. vector<int> vector_name = {1,2,3} 
+                    3. vector<int> vector_name(size of the vector, value at each index);
+
+            *** For each loop :- Special type of loop used for vectors.
+
+                --> for(int i : vector_name){
+                                             cout<< i <<endl;
+                                            }
+
+            * Vector Functions:- 
+                                1. Size --> size of the vector.  --> vector_name.size();
+                                2. push_back --> add elements at the end of the vector.  --> vector_name.push_back(5);
+                                3. pop_back --> delete last element from vector. --> vector_name.pop_back();  // no need to mention element here.
+                                4. front --> to access the 1st element of vector. --> cout<< vector_name.front();
+                                5. back --> to access the last element of vector. --> cout<< vector_name.back();
+                                6. at --> to access element at particular index. --> vector_name.at(i);  // to access ith index element.
+
+                                *** vector_name[i] and vector_name.at[i]  both are same.
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------

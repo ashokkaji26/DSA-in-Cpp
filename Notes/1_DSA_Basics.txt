@@ -13,6 +13,7 @@
                                         * Static memeory allocation:- Memory allocated at compilation time.
                                         * Dynamic memeory allocation:- Memory allocated at execution time.
 
+
 ---------------------------------------------------------------------------------------------------------------------------------------     
 
 *** Topics: - 1.  Flowchart

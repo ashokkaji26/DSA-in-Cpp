@@ -10,9 +10,26 @@
 
         ---> Code runs in two stages:- 1. Compile and 2. Run/execution
 
-                                        * Static memeory allocation:- Memory allocated at compilation time.
-                                        * Dynamic memeory allocation:- Memory allocated at execution time.
+                                        * Static memeory allocation:- 1. Memory allocated during compilation.
+                                                                      2. In static memory
+                                                                      3. Array
 
+                                        * Dynamic memeory allocation:- 1. Memory allocated during execution.
+                                                                       2. In Heap memory
+                                                                       3. Vector
+
+    *** During DSA or coding, most of the time we required resizable array that is "Vectors".
+
+    *** How vectors actually created in memory :- 
+
+                --> Internally vectors are arrays.
+                --> As vectors are Internally arrays, so if we push an element into vector, array will try to accommodate new element in the array,
+                    if there is space availabe  then the element will be stored, but if space is not available then a new array will be created of double size as
+                    previous array and previous elements got copied to the new array automatically, and new element get stored here, this Process
+                    of creating new array of double sized continues ... and we think vector's size increase or decrease magically.
+
+                --> Vector's properties:- 1. Size - no. of elements in vector.
+                                          2. capacity - Total space in array.
 
 ---------------------------------------------------------------------------------------------------------------------------------------     
 
@@ -386,11 +403,16 @@
                                 4. front --> to access the 1st element of vector. --> cout<< vector_name.front();
                                 5. back --> to access the last element of vector. --> cout<< vector_name.back();
                                 6. at --> to access element at particular index. --> vector_name.at(i);  // to access ith index element.
+                                7. capacity --> to find the capacity of vector. --> vector_name.capacity();
 
-                                *** vector_name[i] and vector_name.at[i]  both are same.
+                                *** To access a particular element in vector :- vector_name[i] and vector_name.at[i]  both are same.
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
+
+20.
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------

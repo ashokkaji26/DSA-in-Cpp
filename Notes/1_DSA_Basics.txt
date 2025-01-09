@@ -5,8 +5,16 @@
 *** Important Points:- 
 
 1. Segmentation fault :- We are trying to access the element which is not possible to access in memeory.
+
 2. A question can be solved using Array or Vector both can solve equally.
-3. Static Vs Dynamic memeory allocation :- 
+
+3. When c++ containers are passed to the function, they are "Pass by value" by default. And to make them "Pass by refrence", we add "&"
+   before vector name. like this:- (vector<int> &vector_name). by adding '&' we created alias(alternate name) of original vector,hence any 
+   changes made in function directly change the original vector.
+
+4. n ^ n = 0, n ^ 0 = n.
+
+5. Static Vs Dynamic memeory allocation :- 
 
         ---> Code runs in two stages:- 1. Compile and 2. Run/execution
 
